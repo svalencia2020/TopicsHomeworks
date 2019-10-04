@@ -28,12 +28,32 @@ public class JavaHomework5 {
         return front + str + front;
     }
 
+    public static String front3(String str) {
+        String front;
+
+        if (str.length() >= 3) {
+            front = str.substring(0, 3);
+        }
+        else {
+            front = str;
+        }
+
+        return front + front + front;
+    }
+
+    public static String notString(String str) {
+        if (str.length() >= 3 && str.substring(0, 3).equals("not")) {
+            return str;
+    }
+        return "not " +str;
+    }
 
     public static void main(String[] args) {
         System.out.println(monkeyTrouble(true,false));
         System.out.println(front22("Kitten"));
         System.out.println(or35(45));
-
+        System.out.println(front3("Lollipop"));
+        System.out.println(notString("okay"));
     }
 
 
