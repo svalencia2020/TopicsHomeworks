@@ -30,7 +30,7 @@ public class Homework7 {
             }
             return new int[] {count,sum};
         }
-
+//
         }
 
 
@@ -39,6 +39,7 @@ public class Homework7 {
     public static String remove(String text) {
         String withoutFirstCharacter = text.substring(1); // index starts at zero
         String withoutLastCharacter = text.substring(0, text.length() - 1);
+        return withoutFirstCharacter + withoutFirstCharacter;
     }
 
 
@@ -49,6 +50,6 @@ public class Homework7 {
         removeSpaces("nice hair everyone");
         System.out.println(move(3,6));
         countPositivesSumNegatives(int[] input(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15));
-
+        remove("happy");
 }
 }
