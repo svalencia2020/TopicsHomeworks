@@ -6,8 +6,8 @@ public class Homework7 {
     public static String removeSpaces(String str) {
         String finalstring = "";
         for(int i = 0; i< str.split(" ").length; i++) {
-            System.out.println(str.split(" ")[i]);
-            finalstring = finalstring + i;
+            System.out.println(finalstring + str.split(" ")[i]);
+            finalstring = finalstring + str.split(" ")[i];
         }
         return finalstring;
     }
@@ -36,6 +36,11 @@ public class Homework7 {
 
 
     //problem 4
+    public static String remove(String text) {
+        String withoutFirstCharacter = text.substring(1); // index starts at zero
+        String withoutLastCharacter = text.substring(0, text.length() - 1);
+    }
+
 
 
     //main class
@@ -43,6 +48,7 @@ public class Homework7 {
 
         removeSpaces("nice hair everyone");
         System.out.println(move(3,6));
-        countPositivesSumNegatives(([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]));
+        countPositivesSumNegatives(int[] input(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15));
+
 }
 }
