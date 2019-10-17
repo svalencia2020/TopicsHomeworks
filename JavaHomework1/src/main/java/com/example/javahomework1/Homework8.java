@@ -22,8 +22,8 @@ public class Homework8 {
             return b;
     }
 
-    public static int[] sum3(int[] nums){
-        return (nums[0 + nums[1] + nums[2]]);
+    public static int[] sum3(int[] numnum){
+        return (numnum[0 + numnum[1] + numnum[2]]);
     }
 
     public static void main (String[]args){
