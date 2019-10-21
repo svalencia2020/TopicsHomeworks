@@ -4,55 +4,41 @@ public class Homework9 {
 
 
     //problem 2
-    public static void removeEvenLength(ArrayList<String> array) {
-        for (int i = 0; i < array.size(); i++) {
-            String word = array.get(i);
-            if (word.length() % 2 == 0) {
-                array.remove(i);
-                i--;
+    public void removeEvenLength(ArrayList <String> stringList){
+        for(int i = 0 ;i < stringList.size(); i++){
+            String word=stringList.get(i);
+            if(word.length()%2==0){//even
+                stringList.remove(word);//if it is even,test from the first word  then continue looping
+            }
+
+
+//problem3
+public static boolean isUnique(int[] list) {
+    for (int i = 0; i < list.length; i++) {
+        for (int j = i + 1; j < list.length; j++) {
+            if (list[i] == list[j]) {
+                return false;
             }
         }
     }
+    return true;
+}
+    public static boolean isSorted(double[] array) {
+        double pre = array[0];
 
-//problem3
-    public static boolean isUnique(int a[]) {
-
-        for(int i=0;i<a.length;i++) {
-
-            for(int j=i+1;j<a.length;j++) {
-
-                if(a[i]==a[j]) {
-
-                    return false;
-
-                }
-
+        for (int i = 1; i < array.length; i++) {
+            double current = array[i];
+            if (pre >= current) {
+                return false;
             }
-
+            pre = current;
         }
 
         return true;
     }
-
 }
 
 //problem 4
-public static boolean isSorted(double[] array) {
-    double pre = array[0];
-
-    for (int i = 1; i < array.length; i++) {
-        double current = array[i];
-        if (pre >= current) {
-            return false;
-        }
-        pre = current;
-    }
-
-    return true;
-}
-
-
-
 
 
 
@@ -65,7 +51,7 @@ public static boolean isSorted(double[] array) {
 
         //problem 3 inputs
         System.out.println(isUnique(new int[] {7, 3, -54, 0, 5, 3, -100}));
-        System.out.println(isUnique(new int[] {1, 9, -7, 5, 3}));
+        System.out.println(isUnique(new int[] {8, 2, 4, -21, 3, 1, 5}));
 
         System.out.println(isSorted(new double[] {16.1, 12.3, 22.2, 14.4}));
         System.out.println(isSorted(new double[] {28.9,4.6,5.14}));
